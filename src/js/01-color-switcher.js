@@ -1,5 +1,3 @@
-import { getRandomHexColor } from './random-color';
-
 const startBtnElem = document.querySelector('button[data-start]');
 const stopBtnElem = document.querySelector('button[data-stop]');
 stopBtnElem.disabled = true;
@@ -23,4 +21,8 @@ function stopChangingBgColor(event) {
 
 function changeBodyColor() {
   document.querySelector('body').style.backgroundColor = getRandomHexColor();
+}
+
+export function getRandomHexColor() {
+  return `#${Math.floor(Math.random() * 16777215).toString(16)}`;
 }
