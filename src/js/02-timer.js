@@ -15,6 +15,7 @@ const options = {
     if (selectedDates[0] <= new Date()) {
       startBtnElem.disabled = true;
       Notiflix.Notify.failure('Please choose a date in the future');
+
       //   window.alert('Please choose a date in the future');
     } else {
       chosenDate = selectedDates[0];
